@@ -1,0 +1,21 @@
+Project 1: RBAC-Safe Multi-Tenant Retrieval — Code
+
+rbac_retrieval/
+  app/
+    __init__.py
+    main.py
+    config.py
+    models.py
+    auth.py
+    policy.py
+    metadata_store.py
+    vector_store.py
+    retrieval.py
+    audit.py
+    seed.py
+  tests/
+    test_no_leakage.py
+    test_rbac_filtering.py
+  requirements.txt
+  Dockerfile
+  README.md
