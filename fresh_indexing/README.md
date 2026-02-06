@@ -1,4 +1,4 @@
-# Project 2: Index Freshness + Incremental Updates (CDC + Replay + Lag Monitoring)
+# Index Freshness + Incremental Updates (CDC + Replay + Lag Monitoring)
 
 This repo demonstrates a production-style pattern:
 - Source DB (truth) + CDC event log with monotonically increasing offsets
