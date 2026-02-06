@@ -13,12 +13,14 @@ The focus of this portfolio is on:
 
 ## Projects
 
-### 1) Member Messaging Feature Store (Flink + Kafka)
+### 1) Member Messaging Feature Store
 **Tech:** Apache Flink, Kafka (MSK-compatible), Java, Docker  
 A real-time feature store that merges recent user activity and messaging history to generate unified per-member messaging features for eligibility, suppression, dashboards, and experimentation.
 
-📁 `member-messaging-feature-store/`
-
+<a href="https://github.com/TeeBee17/engineering-portfolio/tree/main/Member%20Messaging%20Feature%20Store">
+📁 member-messaging-feature-store
+</a>
+<br>
 ---
 
 ### 2) Experimentation Metrics Framework
@@ -53,7 +55,9 @@ Tools and examples for tuning Spark workloads, reducing shuffle, and improving c
 
 ---
 
-### 6) High-Throughput Event Aggregator (Kafka & Kotlin): a service that consumes a high-volume stream of "transaction" events from Kafka and aggregates them into time-series windows (e.g., total spend per category every minute).
+### 6) High-Throughput Event Aggregator 
+**Tech:** Kafka & Kotlin
+Service that consumes a high-volume stream of "transaction" events from Kafka and aggregates them into time-series windows (e.g., total spend per category every minute).
 
 Focus: Implement "exactly-once" processing semantics and handle late-arriving data.
 
@@ -156,8 +160,9 @@ only promote if it improves metrics, rollback if it regresses
 Why it matters
 Prevents production regressions, Enables continuous improvement without downtime
 
-
-📁 `Embedding Versioning + Safe Model Upgrades`
+<a href="https://github.com/TeeBee17/engineering-portfolio/tree/main/embedding_versioning">
+📁 Embedding Versioning + Safe Model Upgrades
+ </a>
 ---
 
 ### 17)Index Freshness + Incremental Updates (CDC + Replay + Lag Monitoring): a This repo demonstrates a production-style pattern:
@@ -176,11 +181,13 @@ Enables real-time use cases like:
 Why it matters: Without incremental updates, AI answers are stale; Full rebuilds are too slow + expensive
 
 <a href="https://github.com/TeeBee17/engineering-portfolio/tree/main/fresh_indexing">
-    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" width="50" height="50" alt="Folder Icon">
-    <br>
-    <b>Index Freshness + Incremental Updates</b>
+    <img src="https://cdn-icons-png.flaticon.com/512/716/716784.png" width="20" height="20" alt="Folder Icon">
+    <b> &nbsp &nbsp Index Freshness + Incremental Updates</b>
   </a>
----
+  <br>
+  <br>
+  <br>
+
 
 
 
