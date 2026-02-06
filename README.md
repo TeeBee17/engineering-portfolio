@@ -21,15 +21,16 @@ A real-time feature store that merges recent user activity and messaging history
 📁 member-messaging-feature-store
 </a>
 <br>
----
+
 
 ### 2) Experimentation Metrics Framework
 **Tech:** Spark, SQL, Python  
 Reusable metrics pipeline for A/B testing with standardized exposure/outcome modeling and metric definitions.
 
-📁 `experimentation-metrics-framework/`
-
----
+<a href="https://github.com/TeeBee17/engineering-portfolio/tree/main/Experimentation%20Metrics%20Framework">
+📁 experimentation-metrics-framework
+</a>
+<br>
 
 ### 3) Batch + Streaming Data Quality Framework
 **Tech:** Great Expectations / custom checks, Spark, SQL  
