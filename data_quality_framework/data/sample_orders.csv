@@ -1,0 +1,6 @@
+order_id,customer_id,amount,currency,status,created_at,source
+o-1001,c-77,15000,NGN,PAID,2026-02-07T12:01:00Z,web
+o-1002,c-88,0,NGN,CREATED,2026-02-07T12:02:10Z,whatsapp
+o-1003,c-99,-10,NGN,PAID,2026-02-07T12:03:00Z,web
+o-1004,,7000,NGN,SHIPPED,2026-02-07T12:04:00Z,web
+o-1004,c-77,7000,NGN,SHIPPED,2026-02-07T12:04:00Z,web

@@ -1,0 +1,24 @@
+dataset: orders
+description: "Order events quality rules (batch + streaming)"
+primary_key: [order_id]
+
+fields:
+  order_id: { required: true, type: string }
+  customer_id: { required: true, type: string }
+  amount: { required: true, type: number, min: 0, max: 1000000 }
+  currency: { required: true, type: string, enum: ["NGN","USD","EUR"] }
+  status: { required: true, type: string, enum: ["CREATED","PAID","SHIPPED","DELIVERED","CANCELLED"] }
+  created_at: { required: true, type: datetime_iso }
+  source: { required: false, type: string }
+
+streaming:
+  event_time_field: created_at
+  max_lag_seconds: 600
+
+batch:
+  uniqueness:
+    - [order_id]
+  max_null_ratio:
+    customer_id: 0.00
+    currency: 0.00
+    status: 0.00
