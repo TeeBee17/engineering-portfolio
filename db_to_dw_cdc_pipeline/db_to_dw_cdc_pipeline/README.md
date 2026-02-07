@@ -1,6 +1,6 @@
 # Database-to-Data-Warehouse CDC Pipeline (Postgres + Debezium → Kafka → Lake/Warehouse)
 
-A portfolio-ready **Change Data Capture (CDC)** reference implementation that streams row-level changes from an **OLTP database**
+**Change Data Capture (CDC)** reference implementation that streams row-level changes from an **OLTP database**
 into an analytics **lake/warehouse** with:
 
 - near-real-time ingestion
@@ -97,7 +97,7 @@ python -m cdc_pipeline.cli query --limit 20
 
 ---
 
-## Resume-ready highlights
+## Summary highlights
 
 - Implemented Debezium-based CDC from Postgres WAL to Kafka
 - Built replay-safe consumer with idempotent merges and delete propagation
