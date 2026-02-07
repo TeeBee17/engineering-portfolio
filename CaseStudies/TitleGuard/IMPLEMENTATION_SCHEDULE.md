@@ -4,9 +4,7 @@
 
 # TitleGuard Implementation Roadmap: From MVP to Global Infrastructure
 
-*Implementation schedule below demonstrates a balance between **speed-to-market** (MVP) and **long-term structural stability** (Principal-level foresight).
-
-This schedule is organized into "Epochs" rather than simple months to reflect a milestone-driven engineering culture.*
+*Implementation schedule below demonstrates a balance between **speed-to-market** (MVP) and **long-term structural stability** and the schedule is organized into "Epochs" rather than simple months to reflect a milestone-driven engineering culture.*
 
 ### Epoch 1: The Resilient MVP (Months 1–4)
 
