@@ -149,7 +149,7 @@ python -m spark_opt.cli cost --runtime-seconds 1800 --nodes 10 --rate-per-node-h
 
 ---
 
-## Resume-ready highlights
+## Summary highlights
 - Built a Spark profiling toolkit that parses event logs into stage/task metrics
 - Implemented skew/shuffle/partition detectors and generated actionable recommendations
 - Added cost modeling to compare runtime optimizations in dollars/DBUs
