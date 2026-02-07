@@ -57,7 +57,7 @@ Tools and examples for tuning Spark workloads, reducing shuffle, and improving c
 ---
 
 ### 6) High-Throughput Event Aggregator 
-**Tech:** Kafka & Kotlin
+**Tech:** Kafka & Kotlin  
 Service that consumes a high-volume stream of "transaction" events from Kafka and aggregates them into time-series windows (e.g., total spend per category every minute).
 
 Focus: Implement "exactly-once" processing semantics and handle late-arriving data.
@@ -68,7 +68,7 @@ Use Case: Kafka and the real-time data processing that can be used for Risk and 
 ---
 
 ### 7) Database-to-Data-Warehouse CDC Pipeline 
-**Tech:** Python & Spark 
+**Tech:** Python & Spark  
 A Change Data Capture (CDC) pipeline that monitors a relational database (PostgreSQL) and incrementally syncs changes to a simulated Data Lake (Parquet files) or Snowflake.
 
 Focus: Schema evolution and data integrity checks.
@@ -80,7 +80,7 @@ Use Case : Data Integrations and Transformations
 ---
 
 ### 8) GraphQL Wrapper for Legacy APIs 
-**Tech:** Java/Spring Boot
+**Tech:** Java/Spring Boot  
 GraphQL gateway that aggregates data from three different "messy" REST APIs (e.g., Weather, Finnhub, and Twitter) into a clean, unified schema.
 
 Focus: Implement dataloaders to solve the $N+1$ query problem and add a caching layer with Redis.
@@ -91,7 +91,7 @@ Use Case: "abstract the nuances of raw data access" for other developers.
 ---
 
 ### 9) Distributed Rate Limiter 
-**Tech:** Java & Redis 
+**Tech:** Java & Redis  
 Standalone library or sidecar service that provides distributed rate limiting (Token Bucket or Leaky Bucket algorithms) for microservices.
 
 Focus: ultra-low latency and handling "thundering herd" problems.
@@ -102,7 +102,7 @@ Use Case: For distributed systems and service-oriented architecture (SOA).
 ---
 
 ### 10) Custom Spark SQL Transformer 
-**Tech:** Spark & Scala/Java 
+**Tech:** Spark & Scala/Java  
 A custom Spark library that performs a complex, non-standard data transformation (like PII masking or advanced currency conversion with historical lookups).
 
 Focus: Optimize the Spark DAG and minimize data shuffling.
@@ -113,7 +113,7 @@ Use Case: Contribution to Databricks/Spark infrastructure at a platform level.
 ---
 
 ### 11) Observability & Tracing Middleware 
-**Tech:** Kotlin & OpenTelemetry
+**Tech:** Kotlin & OpenTelemetry  
 Middleware for an HTTP framework (like Ktor or Micronaut) that automatically injects trace IDs and exports metrics to a Prometheus/Grafana stack.
 
 Focus: Developer experience (DX)—how easy is it for another engineer to drop this into their project
@@ -123,7 +123,7 @@ Use Case: "Technical Excellence" and "Operations."
 📁 `Observability & Tracing Middleware/`
 ---
 ### 12) Automated Data Quality Monitor 
-**Tech:** Python & Snowflake/SQL
+**Tech:** Python & Snowflake/SQL  
 Tool that runs scheduled "sanity checks" on a dataset (e.g., checking for nulls, outliers, or schema drift) and sends alerts to Slack/PagerDuty.
 
 Focus: Use Great Expectations or a similar framework to define "data contracts."
@@ -133,7 +133,7 @@ Use Case: For Data Science and Risk teams who rely on clean, reliable data.
 📁 `Automated Data Quality Monitor/`
 ---
 ### 13) Multi-Tenant Feature Flag Service 
-**Tech:** Go or Java 
+**Tech:** Go or Java  
 A service that allows teams to toggle features on/off for specific user segments (e.g., "10% of users in California").
 
 Focus: Implement a highly efficient client-side SDK that caches flags to avoid a network hit for every check.
@@ -143,7 +143,7 @@ Use Case: Offers built-in flexibility for "Product" Testing and "Operations" rol
 📁 `Multi-Tenant Feature Flag Service/`
 ---
 ### 14) Financial Ledger with Idempotency 
-**Tech:** Kotlin
+**Tech:** Kotlin  
 Simple ledger service for moving "money" between accounts, ensuring that every request is idempotent (submitting the same transaction twice doesn't double-charge).
 
 Focus: Write-Ahead Log (WAL) or Event Sourcing pattern.
