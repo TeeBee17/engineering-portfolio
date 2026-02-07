@@ -57,3 +57,4 @@ async def initiate_verification(data: PropertyRequest):
 
 *Authored by: Toyin Bakare* *Role: Distinguished Architect / Technical Strategist*
 ```
+
