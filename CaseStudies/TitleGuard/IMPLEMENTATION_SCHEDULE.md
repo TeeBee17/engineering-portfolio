@@ -1,21 +1,23 @@
-Implementation schedule below demonstrates a balance between **speed-to-market** (MVP) and **long-term structural stability** (Principal-level foresight).
 
-This schedule is organized into "Epochs" rather than simple months to reflect a milestone-driven engineering culture.
 
 ---
 
 # TitleGuard Implementation Roadmap: From MVP to Global Infrastructure
 
+*Implementation schedule below demonstrates a balance between **speed-to-market** (MVP) and **long-term structural stability** (Principal-level foresight).
+
+This schedule is organized into "Epochs" rather than simple months to reflect a milestone-driven engineering culture.*
+
 ### Epoch 1: The Resilient MVP (Months 1–4)
 
 **Objective:** Prove the core value proposition (Verification) in a single high-impact jurisdiction with a focus on data integrity.
 
-* **Month 1: Data Modeling & GIS Setup**
+**Month 1: Data Modeling & GIS Setup**
 * Establish the **PostGIS** schema for coordinate-based property indexing.
 * Build the ingestion pipeline for the initial "Golden Set" of verified land records.
 
 
-* **Month 2: The Legacy Adapter (V1)**
+**Month 2: The Legacy Adapter (V1)**
 * Implement the **FastAPI + Redis + Celery** architecture discussed in the technical spec.
 * Develop the first "Connector" for a priority local government registry.
 
