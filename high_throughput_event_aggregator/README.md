@@ -1,6 +1,6 @@
 # High-Throughput Event Aggregator (Kafka → Windowed Aggregations → Redis/Postgres + API)
 
-A portfolio-ready reference implementation of a **high-throughput event aggregation service** that ingests raw events
+An implementation of a **high-throughput event aggregation service** that ingests raw events
 from Kafka and produces **low-latency rollups** (counters, sums, uniques) suitable for:
 
 - real-time dashboards (support ops, usage analytics, billing)
@@ -14,8 +14,7 @@ This project focuses on **throughput, correctness under retries, windowing**, an
 
 ## Problem Statement
 
-Modern systems emit large volumes of events (clicks, ticket updates, payment attempts, API calls). Downstream users rarely
-need raw events; they need **aggregates**:
+Modern systems emit large volumes of events (clicks, ticket updates, payment attempts, API calls). Downstream users rarely need raw events; they need **aggregates**:
 
 - “requests per minute by customer”
 - “error rate by endpoint”
