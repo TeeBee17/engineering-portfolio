@@ -59,4 +59,4 @@ async def get_property(id: str, db=Depends(get_db_schema)):
 
 This specification serves as a IaaBE (**Infrastructure as a Business Enabler.**) The system allows us to launch in a new country in days rather than months.
 
-
+Authored by: Toyin Bakare Role: Distinguished Architect / Technical Strategist
