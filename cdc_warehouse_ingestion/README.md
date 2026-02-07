@@ -1,6 +1,6 @@
 # CDC Pipeline for Warehouse Ingestion (Outbox → Kafka → DuckDB/Parquet)
 
-A portfolio-ready reference implementation of a **Change Data Capture (CDC)** style ingestion pipeline that moves
+An implementation of a **Change Data Capture (CDC)** style ingestion pipeline that moves
 operational data into an analytics warehouse with **replay safety**, **idempotent upserts**, and **observable checkpoints**.
 
 This project uses the **Outbox Pattern** (Postgres table) to avoid the operational complexity of Debezium/Kafka Connect
