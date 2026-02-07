@@ -1,12 +1,9 @@
 ---
 
-### File 2: `TECHNICAL_SPEC_ADAPTER.md`
-
-
-```markdown
-# Technical Specification: High-Concurrency Legacy Integration Adapter
-## Document Version: 1.0.0
-## Component: Reliability Buffer / Adapter Layer
+# Technical Specification
+## High-Concurrency Legacy Integration Adapter
+### Document Version: 1.0.0
+### Component: Reliability Buffer / Adapter Layer
 
 ### 1. Executive Summary
 Legacy government systems in emerging markets often present 5s–30s latency or intermittent availability. This specification outlines an asynchronous "Reliability Buffer" designed to maintain a high-performance frontend while interfacing with unreliable backend sources.
@@ -45,7 +42,6 @@ async def initiate_verification(data: PropertyRequest):
         "status": "QUEUED",
         "polling_url": f"/api/v1/status/{job_id}"
     }
-
 ```
 
 ### 5. Business Impact
@@ -56,5 +52,5 @@ async def initiate_verification(data: PropertyRequest):
 
 
 *Authored by: Toyin Bakare* *Role: Distinguished Architect / Technical Strategist*
-```
+
 
