@@ -1,0 +1,22 @@
+{
+  "name": "pg-customers-cdc",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "tasks.max": "1",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "cdc",
+    "database.password": "cdc",
+    "database.dbname": "cdc",
+    "database.server.name": "dbserver1",
+    "topic.prefix": "dbserver1",
+    "schema.include.list": "public",
+    "table.include.list": "public.customers",
+    "plugin.name": "pgoutput",
+    "slot.name": "debezium_customers",
+    "publication.autocreate.mode": "filtered",
+    "tombstones.on.delete": "false",
+    "include.schema.changes": "false",
+    "snapshot.mode": "initial"
+  }
+}
