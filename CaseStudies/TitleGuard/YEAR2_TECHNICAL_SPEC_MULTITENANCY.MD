@@ -1,6 +1,3 @@
-This specification outlines the transition of the TitleGuard platform from a single-region deployment to a **Global Multi-Tenant SaaS** architecture. This is a critical milestone for Year 2, focusing on data sovereignty, cost-efficiency, and rapid market entry.
-
-
 
 ---
 
@@ -12,7 +9,7 @@ This specification outlines the transition of the TitleGuard platform from a sin
 
 ### 1. Executive Summary
 
-To scale TitleGuard across various emerging markets, the architecture must support multiple "Tenants" (e.g., different countries or independent real estate boards) on a shared infrastructure while ensuring strict data isolation, localized compliance, and regional residency.
+To scale TitleGuard across various emerging markets, the architecture must support a **Global Multi-Tenant SaaS** architecture. This is a critical milestone for Year 2, focusing on data sovereignty, cost-efficiency, and rapid market entry. Multiple "Tenants" (e.g., different countries or independent real estate boards) on a shared infrastructure while ensuring strict data isolation, localized compliance, and regional residency.
 
 ### 2. Isolation Strategy: "Siloed Schema" Model
 
@@ -58,7 +55,8 @@ async def get_property(id: str, db=Depends(get_db_schema)):
 
 ---
 
-### Why this document helps land a Principal role:
+
 
 This specification serves as a IaaBE (**Infrastructure as a Business Enabler.**) The system allows us to launch in a new country in days rather than months.
+
 
