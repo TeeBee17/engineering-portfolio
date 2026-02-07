@@ -1,6 +1,6 @@
 # Spark Performance + Cost Optimization Toolkit
 
-A portfolio-ready toolkit for **profiling Apache Spark workloads** and generating **actionable performance + cost recommendations**
+A toolkit for **profiling Apache Spark workloads** and generating **actionable performance + cost recommendations**
 from Spark **event logs** and **Spark configuration**.
 
 This repo is intentionally platform-agnostic: it works for Spark on **Databricks, EMR, Dataproc, on-prem YARN/K8s**, etc.,
