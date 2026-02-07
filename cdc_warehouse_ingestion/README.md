@@ -146,7 +146,7 @@ python -m cdc.cli query --limit 10
 
 ---
 
-## Resume-ready highlights
+## Summary highlights
 - Built CDC ingestion pipeline using Outbox + Kafka
 - Implemented replay-safe consumer with idempotent upsert and checkpoints
 - Produced raw Parquet audit log + serving warehouse table
