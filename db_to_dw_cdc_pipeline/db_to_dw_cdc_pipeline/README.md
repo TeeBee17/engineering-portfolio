@@ -1,5 +1,5 @@
-# Database-to-Data-Warehouse CDC Pipeline 
-##(Postgres + Debezium → Kafka → Lake/Warehouse)
+## Database-to-Data-Warehouse CDC Pipeline 
+### (Postgres + Debezium → Kafka → Lake/Warehouse)
 
 **Change Data Capture (CDC)** reference implementation that streams row-level changes from an **OLTP database**
 into an analytics **lake/warehouse** with:
