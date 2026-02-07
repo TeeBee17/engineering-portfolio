@@ -128,7 +128,7 @@ gantt
 
 ### Rationale behind this implementation schedule is as follows:
 
-1. **Risk Mitigation:** I am not planning for the building the blockchain in Month 1, rather I am planning for the  building of the **Resilient Adapter** first, which solves the immediate problem of flaky data.
+1. **Risk Mitigation:** I am not planning for the building the blockchain in Month 1, rather I am planning for the  building of the **Resilient Adapter** first, which solves the immediate problem of flaky data. I cannot over emphasis the importance of the data (the Legacy Adapter), it is critical path. Because emerging market registries are high-latency and unstable, the success of the platform depends on our ability to abstract that volatility away from the user immediately. We don't move to Epoch 2 (Scaling) until the Asynchronous Reliability Buffer has been battle-tested against real-world portal outages.
 2. **Architecture Evolution:** I have explicitly planned the refactor to **Multi-Tenancy** in Epoch 2 to avoid the trap of premature abstraction and avoid the disaster of a late abstraction.
 3. **Value Realization:** I have planned for each epoch to end with a clear business outcome (Fintech integration, regional expansion, legal certainty).
 
