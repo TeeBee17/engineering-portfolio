@@ -5,9 +5,9 @@ flowchart LR
   %% =========================
 
   subgraph Clients
-    C1[Client A (Web/Mobile/Agent)]
-    C2[Client B]
-    C3[Client C]
+    C1["Client A (Web/Mobile/Agent)"]
+    C2["Client B"]
+    C3["Client C"]
   end
 
   subgraph API["Demo API Service (FastAPI)"]
@@ -57,4 +57,5 @@ flowchart LR
 
   %% Load testing
   LT -->|high QPS| MW
+
 
