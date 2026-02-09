@@ -1,4 +1,5 @@
-# Distributed Rate Limiter (Redis + Lua) — Token Bucket + API Middleware
+# Distributed Rate Limiter 
+## (Redis + Lua) — Token Bucket + API Middleware
 
 A **distributed rate limiting** reference implementation designed for real-world API gateways and microservices.
 It provides **consistent enforcement across multiple instances** (pods/VMs) by storing counters/state in **Redis** and using
