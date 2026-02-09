@@ -1,6 +1,6 @@
 # Distributed Rate Limiter (Redis + Lua) — Token Bucket + API Middleware
 
-A portfolio-ready **distributed rate limiting** reference implementation designed for real-world API gateways and microservices.
+A **distributed rate limiting** reference implementation designed for real-world API gateways and microservices.
 It provides **consistent enforcement across multiple instances** (pods/VMs) by storing counters/state in **Redis** and using
 **Lua scripts** for atomic, low-latency decisions.
 
@@ -39,6 +39,66 @@ This repo solves those requirements by using **Redis** as shared state and **Lua
 
 ## Solution Overview
 
+## Architecture Diagram
+
+```mermaid
+%%{init: {"theme":"forest"} }%%
+flowchart LR
+  %% Distributed Rate Limiter
+
+  subgraph Clients
+    C1["Client A (Web/Mobile/Agent)"]
+    C2["Client B"]
+    C3["Client C"]
+  end
+
+  subgraph API["Demo API Service (FastAPI)"]
+    MW["RateLimitMiddleware<br/>- extract identity<br/>- call limiter<br/>- set headers<br/>- return 429 if blocked"]
+    APP["Route Handler: /v1/hello"]
+    MET["/metrics (Prometheus exporter)"]
+  end
+
+  subgraph Limiter["Rate Limiter Library (rate_limiter/)"]
+    KEYS["keys.py: pick_identity_key()<br/>(apiKey > userId > IP)"]
+    CFG["config.py: RateLimitPolicy<br/>rate_per_sec, burst, ttl, cost, prefix"]
+    TB["token_bucket.py: TokenBucketLimiter<br/>evalsha + reload on NOSCRIPT"]
+    LUA["scripts/token_bucket.lua<br/>Atomic: read, refill, allow/deny, write, TTL"]
+    METR["metrics.py: counters + histogram<br/>allowed, blocked, latency"]
+  end
+
+  subgraph Redis["Redis (shared state)"]
+    H1["Hash per identity key<br/>tokens (float), ts_ms (int)<br/>TTL eviction"]
+  end
+
+  subgraph Tools["Validation Tools"]
+    LT["tools/load_test.py<br/>async load generator"]
+  end
+
+  %% Request flow
+  C1 -->|"HTTP request"| MW
+  C2 -->|"HTTP request"| MW
+  C3 -->|"HTTP request"| MW
+
+  MW --> KEYS
+  MW --> CFG
+  MW -->|"check(key)"| TB
+  TB -->|"EVALSHA"| LUA
+  LUA -->|"HMGET/HSET/EXPIRE"| H1
+
+  %% Decision flow
+  TB -->|"Decision: allowed, remaining, retry_after"| MW
+  MW -->|"Allowed"| APP
+  APP -->|"200 OK"| C1
+  MW -->|"Blocked: 429 + Retry-After"| C1
+
+  %% Metrics
+  MW --> METR
+  METR --> MET
+
+  %% Load test
+  LT -->|"high QPS"| MW
+
+```
 ### Algorithm: Token Bucket
 
 Token bucket allows controlled bursts while maintaining an average rate:
@@ -120,7 +180,7 @@ python tools/load_test.py --url http://localhost:8080/v1/hello --api-key demo --
 
 ---
 
-## Resume-ready highlights
+## Project highlights
 
 - Implemented a distributed token bucket rate limiter using Redis-backed shared state and atomic Lua scripts
 - Built ASGI middleware enforcing per-API-key/user/IP quotas with standard 429 + retry-after semantics
